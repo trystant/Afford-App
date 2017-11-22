@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <title>Afford</title>
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
+
+      <link rel="stylesheet" type="text/css" href="css/affordapptest.CSS">
+
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+      <script type="text/javascript">
+          function slideSwitch() {
+              var showing = $('section#slideshow img.active'); // The showing variable points to this html element
+              var nextImg =  showing.next().length ? showing.next() : $('#slideshow img:first'); // If there is an image after the one with the 'active' class, the nextImg variable will reference that. If not, the nextImg variable references the first #slideshow image with the action class assigned to it
+
+              showing.addClass('lastShowing');              // The class 'lastShowing' is added to the showing value
+
+              nextImg.css({opacity: 0.0})                   // The nextImg variable pointing to the html element: Change the css opacity property to 0.0
+                  .addClass('active')                       // Add a 'showing' class to this html element
+                  .animate({opacity: 1.0}, 1000, function() { // The animate function animates all attributes it's assigned to; Turn the opacity from 0.0 to 1.0; Animate for one full second
+                      showing.removeClass('active lastShowing'); // After a second these two classes are removed from the #showing element
+                  });
+          }
+
+          $(function() {                                    // An anonymous function that will work right away. This function makes the following happen:
+              setInterval( "slideSwitch()", 3000 );         // An interval of five seconds
+          });
+      </script>
+
+      <style type="text/css">
+          #slideshow {
+              position:relative;
+              height:350px;
+          }
+
+          #slideshow img {
+              position:absolute;
+              top:20%;
+              left:20%;
+              z-index:8;
+              opacity:0.0;
+              width:475px;
+              height:350px;
+          }
+
+          #slideshow img.active {
+              z-index:10;
+              opacity:1.0;
+          }
+
+          #slideshow img.lastShowing {
+              z-index:9;
+          }
+      </style>
+  </head>
+
+  <body>
+
+<nav>
+                <select>
+                  <option value="" selected="selected">Select</option>
+
+                  <option value="/">Home</option> 
+      <option value="/collections/all">Feed</option> 
+    <option value="/blogs/five-simple-steps-blog">Messaging</option> 
+    <option value="/pages/user profile">User Profile</option> 
+    <option value="/pages/settings">Settings</option> 
+  </select>
+  </nav> 
+
+
+    <nav class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            
+            
+            
+        </div>
+        
+        <!-- /.nav-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<!-- /.navbar -->
+
+<div class="container">
+
+    <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-12 col-sm-9">
+            <div class="jumbotron">
+
+
+                <h1>Hey, There!</h1>
+                <p>Check back everyday for new deals and events near you.</p>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-lg-4">
+                    <h2>Events</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                        </p>
+                    <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+                </div>
+                <!--/.col-xs-6.col-lg-4-->
+                <div class="col-xs-6 col-lg-4">
+                    <h2>Restaurants</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                        </p>
+                    <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+                </div>
+                <!--/.col-xs-6.col-lg-4-->
+                <div class="col-xs-6 col-lg-4">
+                    <h2>Promotions</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                        </p>
+                    <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+                </div>
+                <!--/.col-xs-6.col-lg-4-->
+                <div class="col-xs-6 col-lg-4">
+                    <h2>Coupons </h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                        </p>
+                    <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+                </div>
+                <!--/.col-xs-6.col-lg-4-->
+                <div class="col-xs-6 col-lg-4">
+                    <h2>Daily Deals</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                        </p>
+                    <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+                </div>
+                <!--/.col-xs-6.col-lg-4-->
+                <div class="col-xs-6 col-lg-4">
+                    <h2>Afford Exclusives</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                        </p>
+                    <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+                </div>
+                <!--/.col-xs-6.col-lg-4-->
+            </div>
+            <!--/row-->
+        </div>
+        <!--/.col-xs-12.col-sm-9-->
+
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+            <div class="list-group">
+                <a href="#" class="list-group-item active">Home</a>
+                <a href="#" class="list-group-item">Feed</a>
+                <a href="#" class="list-group-item">Messaging</a>
+                <a href="#" class="list-group-item">User Profile</a>
+                <a href="#" class="list-group-item">Settings</a>
+                
+               
+
+
+            </div>
+        </div>
+        <!--/.sidebar-offcanvas-->
+    </div>
+    <!--/row-->
+
+    <hr>
+
+    <footer>
+        <p>© 2017 Afford</p>
+    </footer>
+
+</div>
+<!--/.container-->
+    
+   
+    
+  </body>
+</html>
