@@ -2,6 +2,18 @@ nav select {
 	display: none;
 }
 
+body {background-color: lightblue;
+}
+
+/*img {
+    padding: 25px 25px 25px 25px;
+}*/
+
+img {padding-right:30px;}
+p { 
+    word-spacing: 2px;
+}
+
 @media (max-width: 960px) {
 	nav ul		{display: none;}
 	nav select	{display: inline-block; }
