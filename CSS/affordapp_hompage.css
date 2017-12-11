@@ -1,2 +1,13 @@
-body {background-color: orange;
+<head>
+
+<style>
+body {background-color: blue;
 }
+
+
+
+p.mix {border-style: dotted dashed solid double;}
+
+</style>
+
+</head>
