@@ -5,6 +5,37 @@
 	<title> Afford: Settings</title>
 	<link rel="stylesheet" type="text/css" href="affordapp_settingsupdate.css">
 </head>
+
+<style type="text/css">
+	.legacy-form-row {
+  	border: none;
+  	margin-bottom: 40px;
+}
+
+	.legacy-form-row legend {
+  	
+  	margin-bottom: 15px;
+}
+
+	.legacy-form-row .radio-label {
+  
+  	display: block;
+  	font-size: 14px;
+  	padding: 0 20px 0 10px;
+}
+
+	.legacy-form-row input[type='radio'] {
+  	
+  	margin-top: 2px;
+}
+  
+	.legacy-form-row .radio-label,
+	.legacy-form-row input[type='radio'] {
+  
+  	float: left;
+
+</style>
+
 <body>
 	<header class="Account Basics">
 		<h1> Account Basics </h1>
@@ -371,8 +402,18 @@
 </select>
 <br/><br/>
 
-<div>Gender</div>
-<br/><br/>
+<legend>Gender</legend>
+<fieldset class="legacy-form-row">
+	<input id="Gender 1" type="radio" name="gender-type" value="Male" />
+	<label for="Gender 1" class="radio-label">Male</label>
+
+	<input id="Gender 2" type="radio" name="gender-type" value="Female" />
+	<label for="Gender 2" class="radio-label">Female</label>
+
+	<input id="Gender 3" type="radio" name="gender-type" value="Custom" checked="">
+	<label for="Gender 3" class="radio-label">Custom</label>
+	</fieldset>	
+
 
 </body>
 </html>
