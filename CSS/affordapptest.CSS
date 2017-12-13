@@ -19,3 +19,6 @@ p {
 	nav select	{display: inline-block; }
 	#sidebar {display: none;}
 }
+
+.jumbotron {
+    background-image: url(../img/Club.jpg);}
