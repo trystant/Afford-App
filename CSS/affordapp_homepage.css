@@ -1,0 +1,21 @@
+body {
+	
+	background-image: url("../img/map.png");
+	background-color: blue;
+}
+
+
+
+p.mix {border-style: dotted dashed solid double;}
+
+#submit_btn {
+	display: block;
+	text-align:center;
+	text-decoration: none; 
+	color: black; 
+	background-color: white; 
+	width:100px; 
+	height:35px;
+	border-right: 1px solid blue; 
+	border-bottom: 1px solid blue;"
+}
