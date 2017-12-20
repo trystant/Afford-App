@@ -1,7 +1,8 @@
 body {
 	
 	background-image: url("../img/signupbg.jpg");
-	background-color: blue;
+	background-color: white;
+	
 }
 
 
@@ -13,9 +14,20 @@ p.mix {border-style: dotted dashed solid double;}
 	text-align:center;
 	text-decoration: none; 
 	color: black; 
-	background-color: white; 
+	background-color: orange; 
 	width:100px; 
 	height:35px;
 	border-right: 1px solid blue; 
 	border-bottom: 1px solid blue;"
+}
+
+div {
+	
+
+}
+
+h1 {
+	text-align: center;
+	font-weight: bolder;
+	font-size: 40px;
 }
