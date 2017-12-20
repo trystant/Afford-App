@@ -12,50 +12,18 @@
       <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-      <script type="text/javascript">
-          function slideSwitch() {
-              var showing = $('section#slideshow img.active'); // The showing variable points to this html element
-              var nextImg =  showing.next().length ? showing.next() : $('#slideshow img:first'); // If there is an image after the one with the 'active' class, the nextImg variable will reference that. If not, the nextImg variable references the first #slideshow image with the action class assigned to it
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.1.5/jquery.mb.YTPlayer.js"></script>
 
-              showing.addClass('lastShowing');              // The class 'lastShowing' is added to the showing value
+    <link href="http://designify.me/code-snippets/video-backgrounds/css/YTPlayer.css" media="all" rel="stylesheet" type="text/css">
 
-              nextImg.css({opacity: 0.0})                   // The nextImg variable pointing to the html element: Change the css opacity property to 0.0
-                  .addClass('active')                       // Add a 'showing' class to this html element
-                  .animate({opacity: 1.0}, 1000, function() { // The animate function animates all attributes it's assigned to; Turn the opacity from 0.0 to 1.0; Animate for one full second
-                      showing.removeClass('active lastShowing'); // After a second these two classes are removed from the #showing element
-                  });
-          }
-
-          $(function() {                                    // An anonymous function that will work right away. This function makes the following happen:
-              setInterval( "slideSwitch()", 3000 );         // An interval of five seconds
-          });
-      </script>
-
-      <style type="text/css">
-          #slideshow {
-              position:relative;
-              height:350px;
-          }
-
-          #slideshow img {
-              position:absolute;
-              top:20%;
-              left:20%;
-              z-index:8;
-              opacity:0.0;
-              width:475px;
-              height:350px;
-          }
-
-          #slideshow img.active {
-              z-index:10;
-              opacity:1.0;
-          }
-
-          #slideshow img.lastShowing {
-              z-index:9;
-          }
-      </style>
+    <script>
+        jQuery(function(){
+             jQuery(".player").mb_YTPlayer();
+        });
+    </script>
+      
+      
   </head>
 
   <body>
@@ -63,7 +31,7 @@
      <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
     
 
-    <script>
+    <!-- <script>
       // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
 
@@ -104,7 +72,7 @@
       function stopVideo() {
          player.mute();
       }
-    </script>
+    </script> -->
 
 <nav>
                 <select>
@@ -119,22 +87,17 @@
   </nav> 
 
 
-    <nav class="navbar navbar-fixed-top navbar-inverse">
-    <div class="container">
-        <div class="navbar-header">
-            
-            
-            
-        </div>
-        
-        <!-- /.nav-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
-<!-- /.navbar -->
+ <!--  <section style="width: 100%; height: 500px; position: absolute; left: 0px; top: 0px; z-index: -3; ">
+        <a id="bgndVideo" class="player"
+  data-property="{videoURL:'6px8cQF1heg',containment:'section', showControls:false, autoPlay:true, loop:true, vol:30, mute:true, startAt:0,  stopAt:150, opacity:1, addRaster:false, quality:'default', optimizeDisplay:true}">My video</a> <!--BsekcY04xvQ-->
+    <!-- </section> --> -->
 
 <div class="container">
 
+<section style="width: 100%; height: 500px; position: absolute; left: 0px; top: 0px; z-index: -3; ">
+        <a id="bgndVideo" class="player"
+  data-property="{videoURL:'6px8cQF1heg',containment:'section', showControls:false, autoPlay:true, loop:true, vol:30, mute:true, startAt:0,  stopAt:150, opacity:1, addRaster:false, quality:'default', optimizeDisplay:true}">My video</a> <!--BsekcY04xvQ-->
+    </section>
     <div class="row row-offcanvas row-offcanvas-right">
 
         <div class="col-xs-12 col-sm-9">
@@ -142,7 +105,7 @@
               <div id="player"></div>
 
 
-                <span class="jumbotron-header">#Be Cheap</span>
+                <span class="jumbotron-header">Hello Dennis</span>
                 <span class="jumbotron-header">Check back everyday for new deals and events near you.</span>
             </div>
             <div class="row">
